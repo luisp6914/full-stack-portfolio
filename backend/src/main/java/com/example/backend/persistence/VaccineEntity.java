@@ -57,10 +57,7 @@ public class VaccineEntity {
 		return totalDosesLeft;
 	}
 
-	public void setId(Integer id) {
-		this.id = id;
-	}
-
+	//Setters
 	public void setName(String name) {
 		this.name = name;
 	}

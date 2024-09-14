@@ -16,15 +16,15 @@ The docker-compose file is located in the root directory of the project.
 The application will be using MySQL relational database to store information and project details.
 
 ### `Running the database`
-`CD` into to the database folder by running this command at the root of the project `cd ./database`
-`Run` the database container by using the command `docker run <image name>`
-`Open` new terminal
-`Interact` with the container by running `docker exec -it <container ID> /bin/bash`
-`Login` to mysql with the command `mysql -p<password> -uroot`
-`View` databases run `show databases;`
-`Use` the database by running `use <database name>;`
-`View` tables run `show tables;`
-`exit` MySQL and bash with the command `exit` on both.
-`Stop` the container with the command `docker stop <container ID>`
+- `CD` into to the database folder by running this command at the root of the project `cd ./database`
+- `Run` the database container by using the command `docker run <image name>`
+- `Open` new terminal
+- `Interact` with the container by running `docker exec -it <container ID> /bin/bash`
+- `Login` to mysql with the command `mysql -p<password> -uroot`
+- `View` databases run `show databases;`
+- `Use` the database by running `use <database name>;`
+- `View` tables run `show tables;`
+- `exit` MySQL and bash with the command `exit` on both.
+- `Stop` the container with the command `docker stop <container ID>`
 
 

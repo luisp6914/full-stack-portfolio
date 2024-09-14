@@ -70,10 +70,7 @@ public class PatientEntity {
         return receivedSecondDose;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
+    //Setters
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
