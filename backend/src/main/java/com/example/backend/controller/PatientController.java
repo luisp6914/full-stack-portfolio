@@ -7,10 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
@@ -46,5 +43,21 @@ public class PatientController {
 
         return new ResponseEntity<>(patientId, status);
     }
+
+    @DeleteMapping("deletePatient")
+    public ResponseEntity<Integer> deletePatient(@RequestParam Integer id){
+        Optional<PatientEntity> deletionSuccess = patientService.deletePatient(id);
+
+        Integer patientId = null;
+        HttpStatus status = HttpStatus.CONFLICT;
+
+        if(deletionSuccess.isPresent()){
+            patientId = deletionSuccess.get().getId();
+            status = HttpStatus.OK;
+        }
+
+        return new ResponseEntity<>(patientId, status);
+    }
+
 
 }

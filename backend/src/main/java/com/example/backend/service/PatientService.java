@@ -72,4 +72,13 @@ public class PatientService {
     }
 
 
+    public Optional<PatientEntity> deletePatient(Integer id) {
+        Optional<PatientEntity> patientToBeDeleted = patientRepository.findById(id);
+
+        if(patientToBeDeleted.isPresent()){
+            patientRepository.deleteById(id);
+        }
+
+        return patientToBeDeleted;
+    }
 }
