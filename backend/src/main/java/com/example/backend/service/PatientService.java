@@ -3,7 +3,6 @@ package com.example.backend.service;
 import com.example.backend.model.Patient;
 import com.example.backend.persistence.PatientEntity;
 import com.example.backend.persistence.PatientRepository;
-import com.example.backend.persistence.VaccineEntity;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +11,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.OptionalInt;
 
 @Service
 public class PatientService {

@@ -1,6 +1,5 @@
 package com.example.backend.controller;
 
-import com.example.backend.model.Patient;
 import com.example.backend.persistence.PatientEntity;
 import com.example.backend.service.PatientService;
 import org.springframework.beans.factory.annotation.Autowired;
