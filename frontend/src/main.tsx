@@ -5,6 +5,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.bundle.js";
 import { HashRouter } from "react-router-dom";
 import "./styles/homepage.css"
+import "./styles/covid-project.css"
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>

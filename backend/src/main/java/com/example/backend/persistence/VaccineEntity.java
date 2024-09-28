@@ -13,21 +13,21 @@ public class VaccineEntity {
 	@Column(name = "doses_required" )
 	private Integer dosesRequired;
 
-	@Column(name = "days_between_doses")
-	private Integer daysBetweenDoses;
+	@Column(name = "dose_intervals")
+	private Integer doseIntervals;
 
-	@Column(name = "total_doses_received")
-	private Integer totalDosesReceived;
+	@Column(name = "doses_received")
+	private Integer dosesReceived;
 
-	@Column(name = "total_doses_left")
-	private Integer totalDosesLeft;
+	@Column(name = "doses_remaining")
+	private Integer dosesRemaining;
 
-	public VaccineEntity(String name, Integer dosesRequired, Integer daysBetweenDoses, Integer totalDosesReceived) {
+	public VaccineEntity(String name, Integer dosesRequired, Integer doseIntervals, Integer dosesReceived) {
 		this.name = name;
 		this.dosesRequired = dosesRequired;
-		this.daysBetweenDoses = daysBetweenDoses;
-		this.totalDosesReceived = totalDosesReceived;
-		this.totalDosesLeft = totalDosesReceived;
+		this.doseIntervals = doseIntervals;
+		this.dosesReceived = dosesReceived;
+		this.dosesRemaining = dosesReceived;
 	}
 
 	public VaccineEntity(){
@@ -45,16 +45,16 @@ public class VaccineEntity {
 		return dosesRequired;
 	}
 
-	public Integer getDaysBetweenDoses() {
-		return daysBetweenDoses;
+	public Integer getDoseIntervals() {
+		return doseIntervals;
 	}
 
-	public Integer getTotalDosesReceived() {
-		return totalDosesReceived;
+	public Integer getDosesReceived() {
+		return dosesReceived;
 	}
 
-	public Integer getTotalDosesLeft() {
-		return totalDosesLeft;
+	public Integer getDosesRemaining() {
+		return dosesRemaining;
 	}
 
 	//Setters
@@ -66,15 +66,15 @@ public class VaccineEntity {
 		this.dosesRequired = dosesRequired;
 	}
 
-	public void setDaysBetweenDoses(Integer daysBetweenDoses) {
-		this.daysBetweenDoses = daysBetweenDoses;
+	public void setDoseIntervals(Integer daysBetweenDoses) {
+		this.doseIntervals = daysBetweenDoses;
 	}
 
-	public void setTotalDosesReceived(Integer totalDosesReceived) {
-		this.totalDosesReceived = totalDosesReceived;
+	public void setDosesReceived(Integer dosesReceived) {
+		this.dosesReceived = dosesReceived;
 	}
 
-	public void setTotalDosesLeft(Integer totalDosesLeft) {
-		this.totalDosesLeft = totalDosesLeft;
+	public void setDosesRemaining(Integer dosesRemaining) {
+		this.dosesRemaining = dosesRemaining;
 	}
 }

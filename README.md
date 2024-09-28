@@ -8,8 +8,8 @@ I will be using technologies like docker, spring boot, react, aws, and many othe
 ## Docker-Compose
 The application is built using docker-compose, which allows me to easily manage and run multiple containers.
 The docker-compose file is located in the root directory of the project.
-`Run` the file with `docker-compose up`
-`Stop` the file with `docker-compose down`
+- `Run` the file with `docker-compose up`
+- `Stop` the file with `docker-compose down`
 
 ## Database:
 
@@ -26,8 +26,6 @@ The application will be using MySQL relational database to store information and
 - `View` tables run `show tables;`
 - `exit` MySQL and bash with the command `exit` on both.
 - `Stop` the container with the command `docker stop <container ID>`
-
-
 
 ## Frontend
 The frontend will be built using React.

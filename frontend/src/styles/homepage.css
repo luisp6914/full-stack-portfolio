@@ -1,14 +1,26 @@
+
+html,body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
 /*Navbar section*/
 .nav-link {
     color: #000;
     font-size: 18px;
     font-family: Arial, Helvetica, sans-serif;
 }
+.nav-link.active {
+    border-bottom: solid 3px #0D6EFD;
+    transition: transform 10s ease
+}
+
 /*The home section background img set up*/
 .background-img{
     height: 100dvh;
     width: 100%;
-    background-image: url("../bg1.jpg");
+    background-image: url("bg1.jpg");
     background-size: cover;
     background-position: top;
     display: flex;

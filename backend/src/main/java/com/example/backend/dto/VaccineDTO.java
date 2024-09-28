@@ -1,36 +1,20 @@
-package com.example.backend.model;
+package com.example.backend.dto;
 
-public class Vaccine {
-    //Data fields
-    private Integer id;
+public class VaccineDTO {
     private String name;
     private Integer dosesRequired;
-    private Integer doseIntervals;
+    private Integer doseInterval;
     private Integer dosesReceived;
     private Integer dosesRemaining;
 
-    //Constructor
-    public Vaccine(Integer id, String name, Integer dosesRequired, Integer doseIntervals, Integer dosesReceived){
-        this.id = id;
+    public VaccineDTO(){}
+
+    public VaccineDTO(String name, Integer dosesRequired, Integer doseInterval, Integer dosesReceived, Integer dosesRemaining) {
         this.name = name;
         this.dosesRequired = dosesRequired;
-        this.doseIntervals = doseIntervals;
+        this.doseInterval = doseInterval;
         this.dosesReceived = dosesReceived;
-        this.dosesRemaining = dosesReceived;
-    }
-
-    public Vaccine(){
-    }
-
-    //Getters and setters
-
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
+        this.dosesRemaining = dosesRemaining;
     }
 
     public String getName() {
@@ -49,12 +33,12 @@ public class Vaccine {
         this.dosesRequired = dosesRequired;
     }
 
-    public Integer getDoseIntervals() {
-        return doseIntervals;
+    public Integer getDoseInterval() {
+        return doseInterval;
     }
 
-    public void setDoseIntervals(Integer doseIntervals) {
-        this.doseIntervals = doseIntervals;
+    public void setDoseInterval(Integer doseInterval) {
+        this.doseInterval = doseInterval;
     }
 
     public Integer getDosesReceived() {

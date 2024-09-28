@@ -4,25 +4,33 @@ import java.time.LocalDate;
 
 public class Patient {
     //Data fields
+    private Integer id;
     private String firstName;
     private String lastName;
     private Integer vaccineId;
-    private LocalDate firstDoseDate;
-    private LocalDate secondDoseDate;
-    private boolean receivedSecondDose;
+    private LocalDate dose1Date;
+    private LocalDate dose2Date;
 
     //Constructors
     public Patient(){
     }
 
-    public Patient(String firstName, String lastName, Integer vaccineId){
+    public Patient(Integer id, String firstName, String lastName, Integer vaccineId){
         LocalDate currentDate = LocalDate.now();
+        this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.vaccineId = vaccineId;
-        this.firstDoseDate = currentDate;
-        this.secondDoseDate = null;
-        this.receivedSecondDose = false;
+        this.dose1Date = currentDate;
+        this.dose2Date = null;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getFirstName() {
@@ -49,27 +57,20 @@ public class Patient {
         this.vaccineId = vaccineId;
     }
 
-    public LocalDate getFirstDoseDate() {
-        return firstDoseDate;
+    public LocalDate getDose1Date() {
+        return dose1Date;
     }
 
-    public void setFirstDoseDate(LocalDate firstDoseDate) {
-        this.firstDoseDate = firstDoseDate;
+    public void setDose1Date(LocalDate dose1Date) {
+        this.dose1Date = dose1Date;
     }
 
-    public LocalDate getSecondDoseDate() {
-        return secondDoseDate;
+    public LocalDate getDose2Date() {
+        return dose2Date;
     }
 
-    public void setSecondDoseDate(LocalDate secondDoseDate) {
-        this.secondDoseDate = secondDoseDate;
+    public void setDose2Date(LocalDate dose2Date) {
+        this.dose2Date = dose2Date;
     }
 
-    public boolean isReceivedSecondDose() {
-        return receivedSecondDose;
-    }
-
-    public void setReceivedSecondDose(boolean receivedSecondDose) {
-        this.receivedSecondDose = receivedSecondDose;
-    }
 }

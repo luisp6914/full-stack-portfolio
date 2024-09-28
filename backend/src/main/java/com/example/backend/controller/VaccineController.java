@@ -9,12 +9,13 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 @RestController
 public class VaccineController {
 
-    VaccineService vaccineService;
+    private final VaccineService vaccineService;
 
     @Autowired
     public VaccineController(VaccineService vaccineService) {
@@ -26,12 +27,14 @@ public class VaccineController {
      * @param id the id of the vaccine
      * @return The vaccine details
      */
-    @GetMapping("/vaccine")
+    @CrossOrigin(origins = "http://localhost:5173")
+    @GetMapping("/getVaccineById")
     public VaccineEntity getVaccineById(@RequestParam Integer id){
         return vaccineService.getVaccineById(id);
     }
 
-    @GetMapping("/vaccines")
+    @CrossOrigin(origins = "http://localhost:5173")
+    @GetMapping("/getAllVaccines")
     public List<VaccineEntity> getAllVaccines(){
         return vaccineService.getAllVaccines();
     }
@@ -43,6 +46,7 @@ public class VaccineController {
      * @param httpEntity the json data in string type
      * @return the vaccine id and  status.
      */
+    @CrossOrigin(origins = "http://localhost:5173")
     @PostMapping("/addVaccine")
     public ResponseEntity<Integer> addVaccine(HttpEntity<String> httpEntity){
         Optional<VaccineEntity> insertionSuccess = vaccineService.insertNewVaccine(httpEntity);
@@ -56,6 +60,7 @@ public class VaccineController {
         return new ResponseEntity<>(vaccineId, status);
     }
 
+    @CrossOrigin(origins = "http://localhost:5173")
     @PutMapping("editVaccine")
     public ResponseEntity<Integer> editVaccine(@RequestParam Integer id, HttpEntity<String> httpEntity){
         Optional<VaccineEntity> insertionSuccess = vaccineService.editVaccine(id, httpEntity);
@@ -67,5 +72,19 @@ public class VaccineController {
         }
 
         return new ResponseEntity<>(vaccineId, status);
+    }
+
+    @CrossOrigin(origins = "http://localhost:5173")
+    @PostMapping("/addDoses")
+    public ResponseEntity<String> addDoses(@RequestParam Integer id, @RequestBody Map<String, Integer> doses){
+        int dosesToAdd = doses.get("doses");
+        boolean sucess = vaccineService.addDoses(id, dosesToAdd);
+
+        if(sucess){
+            return new ResponseEntity<>("Doses added successfully", HttpStatus.OK);
+        }
+        else{
+            return new ResponseEntity<>("Failed to add doses", HttpStatus.CONFLICT);
+        }
     }
 }

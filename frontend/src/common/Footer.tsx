@@ -2,8 +2,8 @@ import { Icon } from "@iconify/react/dist/iconify.js";
 
 const Footer = () => {
     return (
-        <footer className="pb-3 mb-4">
-          <ul className="nav justify-content-center border-bottom pb-3 mb-3">
+        <footer className="pb-5 mb-4 ms-5 me-5">
+          <ul className="nav justify-content-center border-bottom border-dark pb-3 mb-3">
             <li className="nav-item">
               <a href="https://www.linkedin.com/in/luis-perez-5941b91a5/" className="nav-link px-2">
                 <Icon className="fa-linkedin" icon="akar-icons:linkedinv1-fill" width="40" height="40"  style={{color: '#1387fa'}} />

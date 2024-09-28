@@ -33,8 +33,8 @@ const Projects = () => {
             name: "Covid Project",
             discription:
                 "Developed an online system to help a hypothetical local hospital for its COVID vaccination effort. The system will keep track of both patient and vaccine information for the hospital",
-            path: "", ///covid-project
-            finished: false,
+            path: "/covid-project", //
+            finished: true,
         },
         {
             class: "pcPartPicker",

@@ -20,14 +20,12 @@ public class PatientEntity {
     @Column(name = "vaccine_id")
     private Integer vaccineId;
 
-    @Column(name = "first_dose_date")
-    private LocalDate firstDoseDate;
+    @Column(name = "dose1_date")
+    private LocalDate dose1Date;
 
-    @Column(name = "second_dose_date")
-    private LocalDate secondDoseDate;
+    @Column(name = "dose2_date")
+    private LocalDate dose2Date;
 
-    @Column(name = "recieved_second_dose")
-    private boolean receivedSecondDose;
 
     //Constructors
     public PatientEntity(){
@@ -38,7 +36,7 @@ public class PatientEntity {
         this.firstName = firstName;
         this.lastName = lastName;
         this.vaccineId = vaccineId;
-        this.firstDoseDate = currentDate;
+        this.dose1Date = currentDate;
     }
 
     //Getters
@@ -58,17 +56,14 @@ public class PatientEntity {
         return vaccineId;
     }
 
-    public LocalDate getFirstDoseDate() {
-        return firstDoseDate;
+    public LocalDate getDose1Date() {
+        return dose1Date;
     }
 
-    public LocalDate getSecondDoseDate() {
-        return secondDoseDate;
+    public LocalDate getDose2Date() {
+        return dose2Date;
     }
 
-    public boolean isReceivedSecondDose() {
-        return receivedSecondDose;
-    }
 
     //Setters
     public void setFirstName(String firstName) {
@@ -83,15 +78,12 @@ public class PatientEntity {
         this.vaccineId = vaccineId;
     }
 
-    public void setFirstDoseDate(LocalDate firstDoseDate) {
-        this.firstDoseDate = firstDoseDate;
+    public void setDose1Date(LocalDate dose1Date) {
+        this.dose1Date = dose1Date;
     }
 
-    public void setSecondDoseDate(LocalDate secondDoseDate) {
-        this.secondDoseDate = secondDoseDate;
+    public void setDose2Date(LocalDate dose2Date) {
+        this.dose2Date = dose2Date;
     }
 
-    public void setReceivedSecondDose(boolean receivedSecondDose) {
-        this.receivedSecondDose = receivedSecondDose;
-    }
 }

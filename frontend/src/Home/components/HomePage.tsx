@@ -6,12 +6,10 @@ import Projects from "./Projects";
 const HomePage = () => {
     return (
         <>
-            <div id="home">
-                <Home></Home>
-            </div>
-            <div id="about"> <About></About></div>
-            <div id="projects"> <Projects></Projects ></div>
-            <div id="contact"> <Contact></Contact> </div>
+            <div id="home"> <Home/> </div>
+            <div id="about"> <About/> </div>
+            <div id="projects" className="pb-5 pt-5"> <Projects/> </div>
+            <div id="contact" className="pb-5 pt-5"> <Contact/> </div>
         </>
     );
 }
